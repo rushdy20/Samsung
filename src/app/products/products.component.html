@@ -1,0 +1,33 @@
+
+    <div class="product-component">
+      <ng-container >                 
+           <table class="table"  *ngIf="products.length > 0; else noProducts">
+             <thead>
+               <tr>
+                 <th>
+                   Model Code
+                 </th>
+                 <th>
+                  ProductName
+                </th>
+                <th>
+                  SerialNumber
+                </th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr *ngFor="let p of products  ; let i = index">
+                 <td>{{p.ModelCode}}</td>
+                 <td>{{p.ProductName}}</td>
+                 <td>{{p.SerialNumber}}</td>
+               </tr>
+             </tbody>
+           </table>
+           <ng-template #noProducts>
+            Sorry, No product !
+           </ng-template>
+        
+      </ng-container>
+    </div> 
+ 
+
